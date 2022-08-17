@@ -15,12 +15,12 @@ mongoose.connect(
   uri,
   {
     useNewUrlParser: true,
-    useFindAndModify: false,
+
     useUnifiedTopology: true,
   },
   (error, result) => {
     if (error) {
-      console.log("database could not connected");
+      console.log("database could not connected", error);
     }
     if (result) {
       console.log("database connected successfully");
